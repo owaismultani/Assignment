@@ -19,9 +19,12 @@ def get_missing_elements(input_list, lower, upper):
     difference = sorted(list(set(all_list)-set(input_list)))
     return difference
 
-input_list = [0,1,3,50,75]
-lower = 0
-upper = 99
-output = get_missing_elements(input_list, lower, upper)
-print(group_missing_elements(output))
 
+if __name__ == "__main__":
+    # assuming only integer will be given     
+    input_string = input("Enter a list element separated by space ")
+    lower = int(input("Enter lower limit "))
+    upper = int(input("Enter upper limit "))
+    input_list = [int(i) for i in input_string.split()]
+    output = get_missing_elements(input_list, lower, upper)
+    print(group_missing_elements(output))
